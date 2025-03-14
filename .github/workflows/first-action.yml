@@ -1,10 +1,19 @@
-name: First Workflow
-on: workflow_dispatch
+# Name of the Workflow, obligatory field, "name" is a keyword.
+name: First Workflow  
+
+# Defining event that triggers the whole Workflow, "on" is a keyword.
+on: workflow_dispatch  
+
+# Defining jobs section, "jobs" is a keyword.
 jobs:
-  first-job:
-    runs-on: ubuntu-latest
+  # Name of the first job, it can be anything, like variable.
+  first-job:  
+    # Defining runner for all steps, "runs-on" is a keyword, you can use Github-hosted runners or use custom ones.
+    runs-on: ubuntu-latest  
+    # Defining steps, "steps" is a keyword.
     steps:
-      - name: Print greeting
+      # Name of the step, "name" is a keyword, value is up to you, it must starts with the "-" sign.
+      - name: Print greeting  
         run: echo "Hello World!"
       - name: Print goodbye
         run: echo "Done - bye!"
