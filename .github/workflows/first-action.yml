@@ -15,5 +15,8 @@ jobs:
       # Name of the step, "name" is a keyword, value is up to you, it must starts with the "-" sign.
       - name: Print greeting  
         run: echo "Hello World!"
+        # Running multiple line shell commands
       - name: Print goodbye
-        run: echo "Done - bye!"
+        run: |
+          echo "First line"
+          echo "Second line"
