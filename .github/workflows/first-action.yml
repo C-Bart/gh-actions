@@ -1,8 +1,12 @@
 # Name of the Workflow, obligatory field, "name" is a keyword.
 name: First Workflow  
 
-# Defining event that triggers the whole Workflow, "on" is a keyword.
-on: workflow_dispatch  
+# Defining event that triggers the whole Workflow, "on" is a keyword. Most of the triggers are repository related, but we also have others like:
+# workflow_dispatch: manual trigger
+# repository_dispatch:
+# schedlue:
+# workflow_call:
+on: push  
 
 # Defining jobs section, "jobs" is a keyword.
 jobs:
@@ -13,10 +17,10 @@ jobs:
     # Defining steps, "steps" is a keyword.
     steps:
       # Name of the step, "name" is a keyword, value is up to you, it must starts with the "-" sign.
-      - name: Print greeting  
+      - name: Regular and simple step  
         run: echo "Hello World!"
         # Running multiple line shell commands
-      - name: Print goodbye
+      - name: Multi-line step
         run: |
           echo "First line"
-          echo "Second line"
+          echo "Second line"  
